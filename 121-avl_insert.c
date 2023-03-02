@@ -11,7 +11,9 @@ bst_t *bst_insert(bst_t **tree, int value)
 {
 		bst_t *tmp = *tree;
 		bst_t *second = NULL;
+
 		bst_t *new = binary_tree_node(NULL, value);
+
 		if (*tree == NULL)
 			*tree = new;
 		while (tmp)
@@ -38,12 +40,11 @@ bst_t *bst_insert(bst_t **tree, int value)
 		}
 		return (new);
 }
-
 /**
  * avl_insert - inserts a value in an AVL Tree
  * @tree: a double pointer to the root node of the AVL tree
  * @value: value to insert
- * 
+ *
  * Return: a pointer to the created node
  * NULL on failure
  */
