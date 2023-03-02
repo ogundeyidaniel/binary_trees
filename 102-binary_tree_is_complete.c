@@ -28,6 +28,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	h_right = binary_tree_height(tree->right);
 	if (h_right <= h_left)
 		return (h_left + 1);
+
 	return (h_right + 1);
 
 }
@@ -60,6 +61,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 			return (1);
 	}
 	return (0);
+
 }
 /**
  * binary_tree_is_complete - checks if a binary tree is complete
