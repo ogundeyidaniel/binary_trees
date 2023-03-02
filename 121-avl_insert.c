@@ -10,7 +10,9 @@
 bst_t *bst_insert(bst_t **tree, int value)
 {
 	bst_t *tmp = *tree;
+
 	bst_t *second = NULL;
+
 	bst_t *new = binary_tree_node(NULL, value);
 
 	if (*tree == NULL)
@@ -19,6 +21,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 	while (tmp)
 	{
 		second = tmp;
+
 		if (value < tmp->n)
 			tmp = tmp->left;
 		else if (value > tmp->n)
@@ -72,5 +75,6 @@ avl_t *avl_insert(avl_t **tree, int value)
 		node->right = binary_tree_rotate_right(node->right);
 		return (binary_tree_rotate_left(node));
 	}
+
 	return (node);
 }
